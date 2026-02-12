@@ -93,11 +93,11 @@ RUN uv pip install --no-cache-dir \
 # Fresh install of Triton 3.6.0
 RUN uv pip install --no-cache-dir triton==3.6.0
 
-# Install SageAttention
-RUN wget -q -O /tmp/sageattention-2.1.1-cp312-cp312-linux_x86_64.whl \
-    "https://github.com/palechinchilla/SageAttention-2.1.1-Blackwell-/raw/refs/heads/main/sageattention-2.1.1-cp312-cp312-linux_x86_64.whl" && \
-    uv pip install --no-cache-dir /tmp/sageattention-2.1.1-cp312-cp312-linux_x86_64.whl && \
-    rm /tmp/sageattention-2.1.1-cp312-cp312-linux_x86_64.whl
+# Install SageAttention 2.2.0
+RUN wget -q -O /tmp/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl \
+    "https://github.com/palechinchilla/SageAttention-2.1.1-Blackwell-/raw/refs/heads/main/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl" && \
+    uv pip install --no-cache-dir /tmp/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl && \
+    rm /tmp/sageattention-2.2.0-cp312-cp312-linux_x86_64.whl
 
 # Change working directory to ComfyUI
 WORKDIR /comfyui
